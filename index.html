@@ -9,6 +9,11 @@
 <p id="demo"></p>
 
 <script>
+
+$(function(){
+
+setInterval(function(){
+
 var x = document.getElementById("demo");
 
 function getLocation() {
@@ -22,6 +27,10 @@ function showPosition(position) {
     x.innerHTML="Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;
 }
+
+}, 300)
+
+})
 </script>
 
 </body>
