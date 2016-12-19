@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script src="js.js"></script>
 <body>
 
 <p>Click the button to get your coordinates.</p>
@@ -9,8 +10,6 @@
 <p id="demo"></p>
 
 <script>
-
-$(function(){
 
 var x = document.getElementById("demo");
 
@@ -25,8 +24,6 @@ function showPosition(position) {
     x.innerHTML="Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;
 }
-
-})
 </script>
 
 </body>
