@@ -30,8 +30,8 @@ function showPosition(position)
 setInterval(function(){
     x.innerHTML="Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;
-a.innerHTML=position.coords.latitude;
-b.innerHTML=position.coords.longitude;
+$('#long').write(position.coords.latitude);
+$('#lat').write(position.coords.latitude);
 }, 300)
 }
 </script>
