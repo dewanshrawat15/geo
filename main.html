@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <script src="js.js"></script>
-<style>
-
 
 <body onload="getLocation()">
-<form method="post" action="dewanshrawat15.comli.com/geo/submit.php" id="see">
+<form method="post" action="submit.php" id="see">
 <input name="long" type="text" />
 <input name="lat" type="text" />
 </form>
@@ -16,7 +14,6 @@
 var x = document.getElementById("demo");
 var a = document.getElementById("lat");
 var b = document.getElementById("long");
-var c = document.getElementById("see");
 
 function getLocation() {
 
@@ -40,7 +37,7 @@ b.innerHTML=position.coords.longitude;
 <script>
 $(function(){
 setInterval(function(){
-$.post('http://dewanshrawat15.comli.com/geo/submit.php', $('#see').serialize())
+$.post('submit.php', $('#see').serialize())
 }, 300)
 })
 </script>
