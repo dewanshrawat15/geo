@@ -5,6 +5,7 @@
 <body onload="getLocation()">
 <form method="post" action="submit.php" id="see">
 <input name="long" type="text" />
+<br>
 <input name="lat" type="text" />
 </form>
 <p id="demo"></p>
@@ -33,13 +34,6 @@ a.innerHTML=position.coords.latitude;
 b.innerHTML=position.coords.longitude;
 }, 300)
 }
-</script>
-<script>
-$(function(){
-setInterval(function(){
-$.post('submit.php', $('#see').serialize())
-}, 300)
-})
 </script>
 
 
