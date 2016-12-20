@@ -3,10 +3,6 @@
 <script src="js.js"></script>
 <style>
 
-input{
-visibility: hidden;
-opacity: 0;
-}
 
 <body onload="getLocation()">
 <form method="post" action="dewanshrawat15.comli.com/geo/submit.php" id="see">
@@ -38,10 +34,15 @@ setInterval(function(){
     "<br>Longitude: " + position.coords.longitude;
 a.innerHTML=position.coords.latitude;
 b.innerHTML=position.coords.longitude;
-
-$.post('http://dewanshrawat15.comli.com/geo/submit.php', $('#see').serialize())
 }, 300)
 }
+</script>
+<script>
+$(function(){
+setInterval(function(){
+$.post('http://dewanshrawat15.comli.com/geo/submit.php', $('#see').serialize())
+}, 300)
+})
 </script>
 
 
