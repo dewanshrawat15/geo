@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <script src="js.js"></script>
@@ -5,35 +6,26 @@
 
 <p>Click the button to get your coordinates.</p>
 
-<button onclick="getLoc()">Try It</button>
+<button onclick="getLocation()">Try It</button>
 
 <p id="demo"></p>
 
-<script>
+<script type="text/javascript">
 
-var x = document.getElementById("demo");
-function getLoc(){
-setInterval(function(){
-
-function getLocation() {
+$(function(){
+ function getLocation() {
 
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(showPosition);
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";}
     }
-    
-function showPosition(position) {
-    x.innerHTML="Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-alert(''+position.coords.latitude+''+'           '+position.coords.longitude+'');
-}
-getLocation()
-
-}, 300)
+    function showPosition(){
+    	alert(''+position.coords.latitude+''+'           '+position.coords.longitude+'');
+    }
+})
 
 </script>
-
 
 </body>
 </html>
