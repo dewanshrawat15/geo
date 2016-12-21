@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <script src="js.js"></script>
+<body>
 
-<body onload="getLocation()">
-<form method="post" action="submit.php" id="see">
-<input name="long" type="text" />
-<br>
-<input name="lat" type="text" />
-</form>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLoc()">Try It</button>
+
 <p id="demo"></p>
 
 <script>
 
 var x = document.getElementById("demo");
-var a = document.getElementById("lat");
-var b = document.getElementById("long");
+function getLoc(){
+setInterval(function(){
 
 function getLocation() {
 
@@ -23,17 +22,16 @@ function getLocation() {
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";}
     }
-
-}, 300)
     
-function showPosition(position) 
-setInterval(function(){
+function showPosition(position) {
     x.innerHTML="Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;
-$('#long').write(position.coords.latitude);
-$('#lat').write(position.coords.latitude);
-}, 300)
+alert(''+position.coords.latitude+''+'           '+position.coords.longitude+'');
 }
+getLocation()
+
+}, 300)
+
 </script>
 
 
