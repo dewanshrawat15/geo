@@ -14,12 +14,12 @@
 $(function(){
 
     var showPosition=function(){
-    	alert(''+position.coords.latitude+''+'           '+position.coords.longitude+'');
+    	alert(''+position.coords.latitude+''+' '+position.coords.longitude+'');
     }
 
 	$('button').click(function(){
     if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPosition());
+        navigator.geolocation.watchPosition(showPosition)
     } 
     else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
